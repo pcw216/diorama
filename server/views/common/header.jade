@@ -1,0 +1,12 @@
+.page-header
+	if (user)
+		div.pull-right.btn-group(dropdown)
+			button.btn.btn-default #{user.profile.name} (#{user.profile.login})
+			button.btn.btn-default.dropdown-toggle(dropdown-toggle)
+				span.caret
+			ul.dropdown-menu
+				li
+					a.pull-right(href="/logout") Logout
+	h1 
+		| Diorama 
+		small Visual Regression Review
