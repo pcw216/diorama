@@ -4,9 +4,11 @@
 			button.btn.btn-default #{user.profile.name} (#{user.profile.login})
 			button.btn.btn-default.dropdown-toggle(dropdown-toggle)
 				span.caret
+				span.sr-only Toggle Dropdown
 			ul.dropdown-menu
 				li
-					a.pull-right(href="/logout") Logout
+					a(href="/logout") Logout
 	h1 
 		| Diorama 
 		small Visual Regression Review
+	h6(ncy-breadcrumb)

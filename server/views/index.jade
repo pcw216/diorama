@@ -2,7 +2,10 @@ html
 	head
 		include common/scripts.jade
 		include common/styles.jade
-		script(src="public/index.js")
+		script(src="/public/index.js")
+		script(src="/public/templates.js")
+		link(rel='stylesheet', href='/public/index.css')
 	body(ng-app="diorama.app")
 		.container
 			include common/header.jade
+		.container(ui-view="")

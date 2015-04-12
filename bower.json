@@ -20,7 +20,8 @@
     "js-data": "~1.6.3",
     "js-data-angular": "~2.2.3",
     "lodash": "~3.6.0",
-    "angular-bootstrap": "~0.12.1"
+    "angular-bootstrap": "~0.12.1",
+    "angular-breadcrumb": "~0.3.3"
   },
   "overrides": {
     "bootstrap": {

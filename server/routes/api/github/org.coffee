@@ -1,10 +1,10 @@
 express = require('express')
 debug = require('debug')('github:org')
-module.exports = org = (app)->
+module.exports = org = (app, parent)->
 	router = express.Router()	
 	router.get '/', org.list
 	router.get '/:pr', org.read
-	app.use('/org', router)
+	parent.use('/org', router)
 
 org.list = (req, res)->
 	req.github().user.getOrgs {}, (err, response)->

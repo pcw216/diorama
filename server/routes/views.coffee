@@ -6,6 +6,10 @@ module.exports = (app)->
 
 	app.get '/error', (req, res)->
 		res.render 'error'
+	
 	app.get '/', auth.ensureAuthenticated, (req, res)->
+		debug 'res.user', req.user
+		res.render 'index', {user: req.user}
+	app.get '/build*', auth.ensureAuthenticated, (req, res)->
 		debug 'res.user', req.user
 		res.render 'index', {user: req.user}

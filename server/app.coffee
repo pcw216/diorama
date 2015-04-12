@@ -1,10 +1,13 @@
+debug = require('debug')('app:initialization')
 express = require('express')
 path = require('path')
 bodyParser = require('body-parser')
 session = require('express-session')
-debug = require('debug')('app:initialization')
+
+mongoose = require('./lib/mongoose')
 
 app = express()
+mongoose(app)
 app.use(require('cookie-parser')())
 
 app.use(bodyParser.urlencoded({extended: true}))

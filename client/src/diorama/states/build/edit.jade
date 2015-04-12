@@ -1,0 +1,4 @@
+form(ng-init="build.init($form)")
+	.fields(ng-include="'diorama/states/build/_fields'")
+	button.btn.btn-large.btn-primary(ng-click="build.submit()") Submit
+	button.btn.btn-large.btn-default(ng-click="build.cancel()") Cancel

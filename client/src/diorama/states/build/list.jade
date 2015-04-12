@@ -1,0 +1,13 @@
+.builds
+	button.pull-right.btn.btn-primary(ng-click="builds.create()") Create New
+	h2 Builds
+	.build-list		
+		.list-group
+			a.build.list-group-item(
+				ng-repeat="$item in builds.records", 
+				ng-controller="BuildListItemController as item", 
+				ng-init="item.init($item)"
+				ng-click="item.review()")
+				.label.status(ng-bind="item.status", ng-class="item.statusLabelClass")
+				h5.list-group-item-heading(ng-bind="item.name")
+				p.list-group-item-text(ng-bind="item.description")					

@@ -1,0 +1,13 @@
+h3
+	span(ng-bind="build.name")
+	span  
+	small(ng-bind="build.description")
+
+	div.status.pull-right.btn-group(dropdown)
+		button.btn.btn-default(ng-bind="build.status")
+		button.btn.btn-default.dropdown-toggle(dropdown-toggle)
+			span.caret
+		ul.dropdown-menu
+			li
+				a for
+				a example
